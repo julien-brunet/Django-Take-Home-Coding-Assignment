@@ -1,0 +1,381 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 4,
+  "fields": {
+    "name": "Wire & Cable",
+    "slug": "wire-cable"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 5,
+  "fields": {
+    "name": "Conduit & Raceway",
+    "slug": "conduit-raceway"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 6,
+  "fields": {
+    "name": "Boxes & Enclosures",
+    "slug": "boxes-enclosures"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 7,
+  "fields": {
+    "name": "Fittings & Connectors",
+    "slug": "fittings-connectors"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 8,
+  "fields": {
+    "name": "Devices & Controls",
+    "slug": "devices-controls"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 5,
+  "fields": {
+    "name": "Copper",
+    "slug": "copper"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 6,
+  "fields": {
+    "name": "Aluminum",
+    "slug": "aluminum"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 7,
+  "fields": {
+    "name": "PVC",
+    "slug": "pvc"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 8,
+  "fields": {
+    "name": "Galvanized Steel",
+    "slug": "galvanized-steel"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 9,
+  "fields": {
+    "name": "Wet Location",
+    "slug": "wet-location"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 10,
+  "fields": {
+    "name": "Plenum Rated",
+    "slug": "plenum-rated"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 11,
+  "fields": {
+    "name": "Hazardous Location",
+    "slug": "hazardous-location"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 12,
+  "fields": {
+    "name": "Low Voltage",
+    "slug": "low-voltage"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 13,
+  "fields": {
+    "name": "Flexible",
+    "slug": "flexible"
+  }
+},
+{
+  "model": "catalog.tag",
+  "pk": 14,
+  "fields": {
+    "name": "Special Order",
+    "slug": "special-order"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+    "name": "THHN Stranded Copper Wire, #12 AWG, Black",
+    "description": "600V THHN/THWN-2 stranded copper conductor, PVC insulation with nylon jacket, sunlight resistant, rated for wet and dry locations. 500 ft spool.",
+    "category": 4,
+    "tags": [
+      5,
+      7,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "name": "MC Cable, 12/2 Solid Copper with Ground",
+    "description": "Metal-clad cable with 12/2 solid copper conductors and green insulated ground, interlocked galvanized steel armor. 250 ft coil.",
+    "category": 4,
+    "tags": [
+      5,
+      13,
+      8
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "name": "XHHW-2 Aluminum Building Wire, 4/0 AWG",
+    "description": "600V XHHW-2 compact stranded aluminum conductor, cross-linked polyethylene insulation, rated for wet locations. 1000 ft reel, non-stock item.",
+    "category": 4,
+    "tags": [
+      6,
+      14,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "name": "Category 6 Plenum Cable, 23 AWG",
+    "description": "Solid bare copper Cat6 with FEP plenum rated jacket for return-air spaces, 550 MHz. 1000 ft pull box.",
+    "category": 4,
+    "tags": [
+      5,
+      12,
+      10
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "name": "Schedule 40 PVC Conduit, 3/4 in",
+    "description": "Rigid nonmetallic conduit, sunlight resistant, suitable for direct burial and wet locations. Belled end, 10 ft length",
+    "category": 5,
+    "tags": [
+      7,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+    "name": "Galvanized Rigid Conduit, 1 in",
+    "description": "Hot-dip galvanized rigid steel conduit, threaded both ends with coupling. Approved for hazardous locations and wet locations.",
+    "category": 5,
+    "tags": [
+      8,
+      11,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+    "name": "EMT Conduit, 1/2 in",
+    "description": "Electrical metallic tubing, galvanized steel, thin-wall unthreaded. Dry and damp interior locations",
+    "category": 5,
+    "tags": [
+      8
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "name": "Liquidtight Flexible Metal Conduit, 3/4 in",
+    "description": "Galvanized steel core with sunlight resistant PVC jacket, oil and water resistant. 100 ft coil.",
+    "category": 5,
+    "tags": [
+      13,
+      8,
+      7,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "name": "Weatherproof PVC Outlet Box",
+    "description": "Nonmetallic weatherproof box with three 3/4 in threaded hubs and gasketed cover, UV stabilized. Surface mount, wet location rated.",
+    "category": 6,
+    "tags": [
+      7,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "name": "NEMA 4X Enclosure, 16 x 12 x 8 in",
+    "description": "316 stainless steel wall-mount enclosure, continuous hinge, seamless foam-in-place gasket. Washdown and corrosive environments.",
+    "category": 6,
+    "tags": [
+      14,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 14,
+  "fields": {
+    "name": "Explosionproof Junction Box, 3/4 in Hub",
+    "description": "Copper-free aluminum junction box with threaded hubs, for Class I Division 1 and Class II locations. Ground lug included.",
+    "category": 6,
+    "tags": [
+      6,
+      11
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+    "name": "Low Voltage Mounting Bracket, 1-Gang",
+    "description": "PVC old-work mud ring for low voltage cable pass-through, no box required. Drywall installation.",
+    "category": 6,
+    "tags": [
+      12,
+      7
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 16,
+  "fields": {
+    "name": "Set-Screw EMT Connector, 3/4 in",
+    "description": "Malleable iron set-screw connector, zinc electroplated, insulated throat. Dry location EMT terminations.",
+    "category": 7,
+    "tags": []
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 17,
+  "fields": {
+    "name": "Compression Lug, 4/0 AWG, 2-Hole Copper",
+    "description": "Long-barrel two-hole compression lug, electrolytic copper, tin plated. 1/2 in bolt holes.",
+    "category": 7,
+    "tags": [
+      5
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 18,
+  "fields": {
+    "name": "Liquidtight Connector, 1 in, Straight",
+    "description": "Zinc die-cast straight liquidtight connector with sealing ring and insulated throat, wet location rated.",
+    "category": 7,
+    "tags": [
+      13,
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 19,
+  "fields": {
+    "name": "Explosionproof Sealing Fitting, 1 in Vertical",
+    "description": "Copper-free aluminum vertical seal-off with drain, for Class I Division 1 and 2 boundaries. Sealing compound sold separately.",
+    "category": 7,
+    "tags": [
+      6,
+      11,
+      14
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 20,
+  "fields": {
+    "name": "Weather Resistant GFCI Receptacle, 20A 125V",
+    "description": "Self-testing tamper and weather resistant GFCI receptacle. Damp and wet location when installed with an in-use cover.",
+    "category": 8,
+    "tags": [
+      9
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 21,
+  "fields": {
+    "name": "Three-Way Toggle Switch, 20A 120/277V",
+    "description": "Commercial specification grade three-way toggle switch, back and side wire.",
+    "category": 8,
+    "tags": []
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 22,
+  "fields": {
+    "name": "Ceiling Occupancy Sensor, Dual Technology",
+    "description": "Dual-technology PIR and ultrasonic ceiling sensor, 24 VDC, 2000 sq ft coverage. Requires separate power pack.",
+    "category": 8,
+    "tags": [
+      12
+    ]
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 23,
+  "fields": {
+    "name": "Hazardous Location Disconnect Switch, 30A",
+    "description": "Copper-free aluminum enclosed disconnect, Class I Division 1, 30A three-pole, external operating handle.",
+    "category": 7,
+    "tags": [
+      6,
+      11,
+      14
+    ]
+  }
+}
+]
