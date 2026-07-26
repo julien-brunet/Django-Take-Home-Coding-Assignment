@@ -15,21 +15,34 @@ relationships.
 
 ## Setup
 
-
+```
 git clone https://github.com/julien-brunet/Django-Take-Home-Coding-Assignment.git
+
+cd Django-Take-Home-Coding-Assignment
+
 cd product-catalog
 
 python -m venv .venv
-source .venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate
+
+# Windows (Command Prompt)
+.venv\Scripts\activate
+
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
 
 pip install -r requirements.txt
 
 python manage.py migrate
+
 python manage.py loaddata sample_data
+
 python manage.py createsuperuser
 
 python manage.py runserver
-
+```
 
 Then open:
 
@@ -82,7 +95,7 @@ Category ──1:M──> Product <──M:M──> Tag
 
 ### Design decisions
 
-**`Product.category` uses `on_delete=SET_NULL` with `null=True, blank=True`.**
+**`Product.category` uses `on_delete=SET_NULL` with `null=True`.**
 Deleting a category should not delete the products in it. Products whose
 category is removed become uncategorised rather than disappearing. 
 The template renders a null category as "Uncategorized".
@@ -118,7 +131,7 @@ All filtering happens in a single view, `catalog.views.product_list`.
 join; `prefetch_related("tags")` fetches all tags in one additional query. The
 template accesses `product.tags.all`, which reads from the prefetch cache.
 Without both, rendering 20 products with their categories and tags issues
-roughly 41 queries instead of 3. The same treatment is applied to the admin
+roughly 41 queries. The same treatment is applied to the admin
 changelist via `list_select_related` and a `get_queryset` override.
 
 ## Front end

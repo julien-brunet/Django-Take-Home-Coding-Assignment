@@ -8,9 +8,6 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ["name"]
     prepopulated_fields = {"slug": ("name",)}
 
-    def get_queryset(self, request):
-        return super().get_queryset(request)
-
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
     list_display = ["name", "slug"]
