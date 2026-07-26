@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Product Catalog</title>
+</head>
+<body>
+
+<h1>Product Catalog</h1>
+
+<form method="get" action="{% url 'catalog:product-list' %}">
+  <fieldset>
+    <legend>Search</legend>
+    <input type="text" name="q" value="{{ selected_query }}"
+           placeholder="Search name or description" size="40">
+  </fieldset>
+
+  <fieldset>
+    <legend>Category</legend>
+    <select name="category">
+      <option value="">All categories</option>
+      {% for category in categories %}
+        <option value="{{ category.slug }}"
+          {% if category.slug == selected_category %}selected{% endif %}>
+          {{ category.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend>Tags</legend>
+    {% for tag in tags %}
+      <label>
+        <input type="checkbox" name="tags" value="{{ tag.slug }}"
+          {% if tag.slug in selected_tags %}checked{% endif %}>
+        {{ tag.name }}
+      </label>
+    {% endfor %}
+    <p>
+      <label>
+        <input type="radio" name="tag_mode" value="all"
+          {% if tag_mode == "all" %}checked{% endif %}>
+        Match all selected tags
+      </label>
+      <label>
+        <input type="radio" name="tag_mode" value="any"
+          {% if tag_mode == "any" %}checked{% endif %}>
+        Match any selected tag
+      </label>
+    </p>
+  </fieldset>
+
+  <button type="submit">Apply</button>
+  <a href="{% url 'catalog:product-list' %}">Reset</a>
+</form>
+
+<hr>
+
+<h2>{{ result_count }} product{{ result_count|pluralize }}</h2>
+
+{% for product in products %}
+  <div>
+    <strong>{{ product.name }}
+    <br>
+    <small>
+      {{ product.category|default:"Uncategorized" }}
+      {% if product.tags.all %}
+        &middot;
+        {% for tag in product.tags.all %}{{ tag.name }}{% if not forloop.last %}, {% endif %}{% endfor %}
+      {% endif %}
+    </small>
+    <p>{{ product.description }}</p>
+  </div>
+  <hr>
+{% empty %}
+  <p>No products match those filters.</p>
+{% endfor %}
+
+</body>
+</html>
